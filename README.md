@@ -1,4 +1,4 @@
-# 🎯 K-SCM Mock Target Sandbox
+# K-SCM Mock Target Sandbox
 
 [![Target Sandbox](https://img.shields.io/badge/Role-Target_Sandbox_Repository-orange)](https://github.com/kerdjou-tigroudja/k-scm-showcase)
 [![Compliance Mesh](https://img.shields.io/badge/Audited_by-K--SCM_Sovereign_Mesh-blue)](https://github.com/kerdjou-tigroudja/k-scm-showcase)
@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Purpose of this Repository
+## Purpose of this Repository
 
 This repository acts as a public **sandbox target** for the **[K-SCM (Sovereign Compliance Mesh)](https://github.com/kerdjou-tigroudja/k-scm-showcase)** agent.
 
@@ -19,20 +19,21 @@ When K-SCM executes a compliance audit against this repository:
 
 ---
 
-## 🔍 Synthetic Non-Compliances Catalog
+## Synthetic Non-Compliances Catalog
 
 | File | Non-Compliance | Regulation & Article | Expected Remediation |
 |---|---|---|---|
 | `app/main.py` | Hardcoded secret keys & plaintext credentials | GDPR Art. 32 / ISO 27001 | Migrate to Google Secret Manager |
 | `app/main.py` | Unencrypted PII file write (`/tmp/processed_users.txt`) | GDPR Art. 5(1)(f) & Art. 32 | Redact PII & route through secure telemetry |
 | `app/main.py` | High-risk AI inference without audit logging / guardrails | EU AI Act Art. 14 & 15 | Add robust logging, schema validation & guardrails |
-| `infra/main.tf` | GCS Bucket without CMEK encryption & `allUsers` IAM binding | GDPR Art. 32 / ANSSI SecNumCloud | Enforce CMEK KMS keys & public access prevention |
+| `infra/main.tf` | GCS Bucket without CMEK encryption & `allUsers` IAM binding | GDPR Art. 32 / ANSSI SecNumCloud Baseline | Enforce CMEK KMS keys & public access prevention |
 | `infra/main.tf` | Compute Firewall allowing `0.0.0.0/0` SSH access | CIS GCP Benchmark 3.6 | Restrict source CIDR to authorized IAP ranges |
 | `infra/main.tf` | Vertex AI Dataset without CMEK encryption spec | EU AI Act Sovereign Infrastructure | Attach KMS customer-managed encryption key |
 
 ---
 
-## 🔗 Related Resources
+## Related Resources
 
 * **K-SCM Showcase Engine :** [`kerdjou-tigroudja/k-scm-showcase`](https://github.com/kerdjou-tigroudja/k-scm-showcase)
 * **Author Hub :** [https://kerdjou.dev](https://kerdjou.dev)
+* **Author Contact :** [contact@kerdjou.dev](mailto:contact@kerdjou.dev)
