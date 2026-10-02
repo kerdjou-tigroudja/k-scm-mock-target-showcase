@@ -27,7 +27,7 @@ When K-SCM executes a compliance audit against this repository:
 | `app/main.py` | Unencrypted PII file write (`/tmp/processed_users.txt`) | GDPR Art. 5(1)(f) & Art. 32 | Redact PII & route through secure telemetry |
 | `app/main.py` | High-risk AI inference without audit logging / guardrails | EU AI Act Art. 14 & 15 | Add robust logging, schema validation & guardrails |
 | `infra/main.tf` | GCS Bucket without CMEK encryption & `allUsers` IAM binding | GDPR Art. 32 / ANSSI SecNumCloud Baseline | Enforce CMEK KMS keys & public access prevention |
-| `infra/main.tf` | Compute Firewall allowing `0.0.0.0/0` SSH access | CIS GCP Benchmark 3.6 | Restrict source CIDR to authorized IAP ranges |
+| `infra/main.tf` | Compute Firewall allowing `0.0.0.0/0` SSH+RDP access (ports 22 and 3389) | CIS GCP Benchmark 3.6+3.7 | Restrict source CIDR to authorized IAP ranges |
 | `infra/main.tf` | Vertex AI Dataset without CMEK encryption spec | EU AI Act Sovereign Infrastructure | Attach KMS customer-managed encryption key |
 
 ---
