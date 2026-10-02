@@ -1,7 +1,7 @@
 variable "project_id" {
-  description = "The GCP project ID"
+  description = "GCP project ID. Required, with no default, so apply cannot target a project unless one is passed explicitly."
   type        = string
-  default     = "sandbox-compliance-target"
+  nullable    = false
 }
 
 variable "region" {
