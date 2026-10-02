@@ -16,7 +16,7 @@ def process_user_records(user_list: list[dict]) -> None:
         ssn = user.get("ssn")  # High-risk PII
         credit_card = user.get("credit_card")
 
-        # VIOLATION 2: Unencrypted local file write of raw PII without consent or audit trail (GDPR Art 5 & 32)
+        # VIOLATION 2: Unencrypted local file write of raw PII to /tmp/processed_users.txt (GDPR Art. 5(1)(f) & Art. 32)
         with open("/tmp/processed_users.txt", "a") as f:
             f.write(f"USER:{user_id}|EMAIL:{email}|SSN:{ssn}|CC:{credit_card}\n")
 
