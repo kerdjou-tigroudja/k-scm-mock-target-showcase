@@ -6,6 +6,8 @@
 
 > **Simulated enterprise codebase and Terraform infrastructure containing intentional regulatory non-compliances (EU AI Act & GDPR) for evaluating and demonstrating the autonomous audit and GitOps remediation capabilities of K-SCM.**
 
+**Do not apply.** `infra/` is a static fixture for scanners and demos. `project_id` has no default, so `terraform apply` cannot select a GCP project on its own. Applying this configuration would create the intentional misconfigurations in whatever project id you pass.
+
 ---
 
 ## Purpose of this Repository
